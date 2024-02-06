@@ -1,0 +1,24 @@
+{
+  "name": "playerEvents1",
+  "type": "map",
+  "events": {
+	"tryJumping": {
+	  "eventName": "d_tryJumping",
+	  "type": "dialog",
+	  "data": "I'm starting to think this guy has no idea what he's talking about... I'll have to find my own way around\n\n[SPACE] TO JUMP",
+	  "parent": "player",
+	  "preDelay": 8,
+	  "duration": 6,
+	  "hideCurrentDialog": true
+	},
+	"tryWalljumping": {
+	  "eventName": "d_tryJumping",
+	  "type": "dialog",
+	  "data": "It's too high for me to jump, and there's nothing around to climb... Maybe I can use this wall to get higher somehow.",
+	  "parent": "player",
+	  "preDelay": 8,
+	  "duration": 6,
+	  "hideCurrentDialog": true
+	}
+  }
+}

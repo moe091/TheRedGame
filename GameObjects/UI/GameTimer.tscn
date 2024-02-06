@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://crkxc2qskyqp2"]
+
+[ext_resource type="Script" path="res://GameObjects/UI/GameTimer.gd" id="1_g4yay"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_284cq"]
+font_size = 72
+
+[node name="Label" type="Label"]
+z_index = 1000
+offset_right = 40.0
+offset_bottom = 23.0
+text = "TIME:"
+label_settings = SubResource("LabelSettings_284cq")
+script = ExtResource("1_g4yay")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60000.0

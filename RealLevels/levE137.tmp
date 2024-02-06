@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmyq5ia63qcgf"]
+
+[ext_resource type="Script" path="res://RealLevels/level_1.gd" id="1_8avap"]
+[ext_resource type="PackedScene" uid="uid://dvk2ur0ujl6bp" path="res://GameObjects/backgrounds/BobRossBG.tscn" id="1_yrdxf"]
+[ext_resource type="PackedScene" uid="uid://7hgxuneehfba" path="res://GameObjects/MainPlayer.tscn" id="2_yrll7"]
+[ext_resource type="PackedScene" uid="uid://cc2fwqdnvjjwa" path="res://GameObjects/effects/particle_controller.tscn" id="3_wmb2r"]
+[ext_resource type="PackedScene" uid="uid://ddnjk6syawrhy" path="res://GameObjects/Blocks/bobross_grass_plat.tscn" id="4_5qk12"]
+[ext_resource type="PackedScene" uid="uid://c2aqq1pdkg77w" path="res://GameObjects/LevelObjects/BobRoss/house.tscn" id="5_tw5x0"]
+[ext_resource type="Script" path="res://RealLevels/EventTimer1.gd" id="7_43r4s"]
+[ext_resource type="Script" path="res://Scripts/Level1/EventTimer2.gd" id="8_rao4r"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_8avap")
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_yrll7")]
+position = Vector2(-2962, 924)
+
+[node name="ParticleController" parent="PlayerNode" instance=ExtResource("3_wmb2r")]
+position = Vector2(0, 6)
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="House" parent="Map" instance=ExtResource("5_tw5x0")]
+z_index = -2
+position = Vector2(-2615, 739)
+
+[node name="BobRossGrassPlat" parent="Map" instance=ExtResource("4_5qk12")]
+layer_0/tile_data = PackedInt32Array(851961, 1, 0, 851962, 1, 0, 851963, 1, 0, 851964, 1, 0, 851965, 1, 0, 851966, 1, 0, 851967, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0)
+
+[node name="SekiroBG" parent="Map" instance=ExtResource("1_yrdxf")]
+
+[node name="EventTimers" type="Node" parent="."]
+
+[node name="EventTimer1" type="Timer" parent="EventTimers" node_paths=PackedStringArray("level")]
+wait_time = 1.5
+one_shot = true
+script = ExtResource("7_43r4s")
+level = NodePath("../..")
+
+[node name="EventTimer2" type="Timer" parent="EventTimers" node_paths=PackedStringArray("level")]
+wait_time = 3.0
+one_shot = true
+script = ExtResource("8_rao4r")
+level = NodePath("../..")

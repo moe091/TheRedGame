@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc8x3un1onoqf"]
+
+[ext_resource type="Script" path="res://GameObjects/Util/Checkpoint.gd" id="1_yc1vy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8arf"]
+size = Vector2(489, 480)
+
+[node name="JumpCheckpoint" type="Area2D"]
+position = Vector2(3485, 479)
+collision_mask = 4097
+script = ExtResource("1_yc1vy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-167.5, -58)
+shape = SubResource("RectangleShape2D_y8arf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

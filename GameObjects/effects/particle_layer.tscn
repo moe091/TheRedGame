@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://draxt2jmohg3a"]
+
+[ext_resource type="PackedScene" uid="uid://dptv04dffd8vp" path="res://GameObjects/effects/test_particles.tscn" id="1_s4cgm"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("1_s4cgm")]
+amount = 100

@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://7hgxuneehfba"]
+
+[ext_resource type="Script" path="res://PlayerNode.gd" id="1_7it41"]
+[ext_resource type="Texture2D" uid="uid://dh1ii1kq3451o" path="res://Images/ball.png" id="2_411d1"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_nk4rl"]
+[ext_resource type="Texture2D" uid="uid://dg1py5tx20ow2" path="res://icon.svg" id="4_5wgqb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08cdj"]
+radius = 59.0085
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyf1g"]
+size = Vector2(115, 20)
+
+[node name="PlayerNode" type="Node"]
+script = ExtResource("1_7it41")
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(-1386, -961)
+collision_layer = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_411d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_08cdj")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Feet")
+update_rotation = false
+update_scale = false
+
+[node name="Feet" type="Area2D" parent="." groups=["Feet"]]
+position = Vector2(-1386, -961)
+script = ExtResource("3_nk4rl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Feet"]
+position = Vector2(-0.5, 51)
+shape = SubResource("RectangleShape2D_dyf1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="Feet"]
+position = Vector2(1.00012, 51.5)
+scale = Vector2(0.90625, 0.0859366)
+texture = ExtResource("4_5wgqb")
+
+[node name="Camera2D" type="Camera2D" parent="Feet"]
+position = Vector2(0, 8)
+zoom = Vector2(0.25, 0.25)
+
+[connection signal="body_entered" from="Feet" to="Player" method="_on_area_2d_body_entered"]

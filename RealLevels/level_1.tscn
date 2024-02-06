@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmyq5ia63qcgf"]
+
+[ext_resource type="Script" path="res://RealLevels/level_1.gd" id="1_8avap"]
+[ext_resource type="PackedScene" uid="uid://7hgxuneehfba" path="res://GameObjects/MainPlayer.tscn" id="2_yrll7"]
+[ext_resource type="PackedScene" uid="uid://cc2fwqdnvjjwa" path="res://GameObjects/effects/particle_controller.tscn" id="3_wmb2r"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_8avap")
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_yrll7")]
+position = Vector2(-2942, 938)
+
+[node name="ParticleController" parent="PlayerNode" instance=ExtResource("3_wmb2r")]
+position = Vector2(0, 6)
+
+[node name="Map" type="Node2D" parent="."]

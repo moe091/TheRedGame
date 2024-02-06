@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwe4l4ql4amnb"]
+
+[ext_resource type="Texture2D" uid="uid://3auvim6e58dd" path="res://Images/starry_night/bg1.png" id="1_qyie8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qyie8")
+
+[node name="Camera2D" type="Camera2D" parent="."]

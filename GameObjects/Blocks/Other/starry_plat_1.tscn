@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8bd41m5teoh1"]
+
+[ext_resource type="Texture2D" uid="uid://2xmhmq5rvhml" path="res://Images/starry_night/starry_platsheet.png" id="1_105bp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s27tl"]
+texture = ExtResource("1_105bp")
+texture_region_size = Vector2i(900, 420)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-450, -210, 450, -210, 450, -112.5, -450, -112.5)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-450, -210, 450, -210, 450, -112.5, -450, -112.5)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-450, -210, 450, -210, 450, -112.5, -450, -112.5)
+
+[sub_resource type="TileSet" id="TileSet_rgheq"]
+tile_size = Vector2i(900, 100)
+physics_layer_0/collision_layer = 2
+sources/1 = SubResource("TileSetAtlasSource_s27tl")
+
+[node name="StarryPlats" type="TileMap" groups=["walljumpable"]]
+tile_set = SubResource("TileSet_rgheq")
+cell_quadrant_size = 128
+format = 2

@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46khh7y88td4"]
+
+[ext_resource type="PackedScene" uid="uid://boh78rooa44dx" path="res://Prefabs/block1.tscn" id="3_853uo"]
+[ext_resource type="PackedScene" uid="uid://7hgxuneehfba" path="res://GameObjects/MainPlayer.tscn" id="3_dwha4"]
+[ext_resource type="PackedScene" uid="uid://chpon4wfxvy2w" path="res://Prefabs/parallax_background1.tscn" id="4_2yutg"]
+[ext_resource type="PackedScene" uid="uid://dhmfy3ptq4ck3" path="res://Prefabs/wall1.tscn" id="4_fej50"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PlayerNode" parent="." instance=ExtResource("3_dwha4")]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Wall1" parent="Node" instance=ExtResource("4_fej50")]
+position = Vector2(0, 1262)
+
+[node name="Block1" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(1334, -48)
+
+[node name="Block2" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(1580, -48)
+
+[node name="Block3" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(1826, -48)
+
+[node name="Block4" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(2072, -48)
+
+[node name="Block5" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(2318, -48)
+
+[node name="Block6" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(2564, -48)
+
+[node name="Block7" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(2810, -48)
+
+[node name="Block15" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-388, -48)
+
+[node name="Block16" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-142, -48)
+
+[node name="Block17" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(104, -48)
+
+[node name="Block18" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(350, -48)
+
+[node name="Block19" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(596, -48)
+
+[node name="Block20" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(842, -48)
+
+[node name="Block21" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(1088, -48)
+
+[node name="Block8" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3056, -48)
+
+[node name="Block9" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3302, -48)
+
+[node name="Block10" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3548, -48)
+
+[node name="Block11" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3794, -48)
+
+[node name="Block12" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(4040, -48)
+
+[node name="Block13" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(4286, -48)
+
+[node name="Block14" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(4532, -48)
+
+[node name="Block36" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(2949, 352)
+
+[node name="Block37" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3195, 352)
+
+[node name="Block38" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3441, 352)
+
+[node name="Block39" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3687, 352)
+
+[node name="Block40" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(3933, 352)
+
+[node name="Block41" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(4179, 352)
+
+[node name="Block42" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(4425, 352)
+
+[node name="Block25" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-634, -48)
+
+[node name="Block22" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(1334, -293)
+
+[node name="Block24" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-634, -540)
+
+[node name="Block26" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(0, -890)
+
+[node name="Block27" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(0, -1136)
+
+[node name="Block28" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(0, -1381)
+
+[node name="Block29" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-880, -786)
+
+[node name="Block30" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-1128, -786)
+
+[node name="Block31" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-1375, -786)
+
+[node name="Block32" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-1622, -786)
+
+[node name="Block33" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-1868, -786)
+
+[node name="Block34" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-1868, -1032)
+
+[node name="Block35" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-634, -786)
+
+[node name="Block23" parent="Node" instance=ExtResource("3_853uo")]
+position = Vector2(-634, -294)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("4_2yutg")]

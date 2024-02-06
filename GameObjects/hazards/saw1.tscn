@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb78rrfmyrir6"]
+
+[ext_resource type="Texture2D" uid="uid://bd2gt2x6vvuhd" path="res://Images/middle/hazards/saw1.png" id="1_gx44h"]
+[ext_resource type="Script" path="res://GameObjects/hazards/saw1.gd" id="1_t2867"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4tbd4"]
+radius = 114.0
+
+[node name="Saw1" type="StaticBody2D" groups=["kill_on_hit"]]
+z_index = -4
+collision_layer = 4
+script = ExtResource("1_t2867")
+
+[node name="SawSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_gx44h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill_on_hit"]]
+shape = SubResource("CircleShape2D_4tbd4")

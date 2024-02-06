@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cddud0ysgty8f"]
+
+[ext_resource type="Script" path="res://GameTimer.gd" id="1_th5eg"]
+
+[node name="GameTimer" type="Timer"]
+wait_time = 600.0
+script = ExtResource("1_th5eg")

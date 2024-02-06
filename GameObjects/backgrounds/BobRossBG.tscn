@@ -1,0 +1,123 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvk2ur0ujl6bp"]
+
+[ext_resource type="Texture2D" uid="uid://bwjajylyy6dyn" path="res://Images/BOBROSS/9_background.png" id="1_xaw6y"]
+[ext_resource type="Texture2D" uid="uid://b1kbo1voccqid" path="res://Images/BOBROSS/8_mountains.png" id="2_aghot"]
+[ext_resource type="Texture2D" uid="uid://24wbmy7dkl3n" path="res://Images/BOBROSS/7_mountains.png" id="3_cbef6"]
+[ext_resource type="Texture2D" uid="uid://bacedxnglh7xi" path="res://Images/BOBROSS/6_mountains.png" id="4_hvfj2"]
+[ext_resource type="Texture2D" uid="uid://jok4bwfx6t7o" path="res://Images/BOBROSS/5_mountains.png" id="5_73rmt"]
+[ext_resource type="Texture2D" uid="uid://dvm3cg1gecf1j" path="res://Images/BOBROSS/4_mountains.png" id="6_vkddd"]
+[ext_resource type="Texture2D" uid="uid://lcfpyb7nvws8" path="res://Images/BOBROSS/3_frontmountains.png" id="7_63x0l"]
+[ext_resource type="Texture2D" uid="uid://dm8skhsvwia76" path="res://Images/BOBROSS/2_fronttrees.png" id="8_rgo88"]
+[ext_resource type="Texture2D" uid="uid://danb1hfwyb76" path="res://Images/BOBROSS/1_purplegrass.png" id="9_g03ho"]
+
+[node name="SekiroBG" type="ParallaxBackground"]
+offset = Vector2(0, 540)
+transform = Transform2D(1, 0, 0, 1, 0, 540)
+
+[node name="BG" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="BobRossBG" type="Sprite2D" parent="BG"]
+texture_repeat = 2
+scale = Vector2(1, 1.00376)
+texture = ExtResource("1_xaw6y")
+offset = Vector2(960, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="Mtn8" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.02, 0)
+
+[node name="Mtn8" type="Sprite2D" parent="Mtn8"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("2_aghot")
+offset = Vector2(0, -180)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn7" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.06, 0.02)
+
+[node name="Mtn7" type="Sprite2D" parent="Mtn7"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("3_cbef6")
+offset = Vector2(0, -200)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn6" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.1, 0.04)
+
+[node name="Mtn6" type="Sprite2D" parent="Mtn6"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("4_hvfj2")
+offset = Vector2(0, -220)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn5" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.14, 0.06)
+
+[node name="Mtn5" type="Sprite2D" parent="Mtn5"]
+texture_repeat = 3
+position = Vector2(0, 200)
+scale = Vector2(1, 1.04324)
+texture = ExtResource("5_73rmt")
+offset = Vector2(0, -220)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.2, 0.1)
+
+[node name="Mtn4" type="Sprite2D" parent="Mtn4"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("6_vkddd")
+offset = Vector2(0, -240)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.25, 0.12)
+
+[node name="Mtn3" type="Sprite2D" parent="Mtn3"]
+texture_repeat = 3
+position = Vector2(0, -40)
+scale = Vector2(1, 1.1)
+texture = ExtResource("7_63x0l")
+offset = Vector2(0, 20)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.34, 0.16)
+
+[node name="Mtn2" type="Sprite2D" parent="Mtn2"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("8_rgo88")
+offset = Vector2(0, -190)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mtn1" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.4, 0.2)
+
+[node name="Mtn1" type="Sprite2D" parent="Mtn1"]
+texture_repeat = 3
+texture = ExtResource("9_g03ho")
+offset = Vector2(0, 100)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1180)

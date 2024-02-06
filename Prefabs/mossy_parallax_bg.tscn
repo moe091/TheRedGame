@@ -1,0 +1,343 @@
+[gd_scene load_steps=12 format=3 uid="uid://dmffrgvvjaja0"]
+
+[ext_resource type="Texture2D" uid="uid://v6jm86o0ylri" path="res://Images/Mossy/BG.png" id="1_ck1lt"]
+[ext_resource type="Texture2D" uid="uid://rui1eecuutg8" path="res://Images/Mossy/Mossy Tileset/Mossy - BackgroundDecoration.png" id="2_s77en"]
+[ext_resource type="Texture2D" uid="uid://ccreaiw1o4twr" path="res://Images/Mossy/Plant Animations/BlueFlower1/BlueFlower_00000.png" id="3_7gtom"]
+[ext_resource type="Texture2D" uid="uid://b0tyab7jci65q" path="res://Images/Mossy/Mossy Tileset/Mossy - Hanging Plants.png" id="3_oh5bb"]
+[ext_resource type="Texture2D" uid="uid://tt3tdavhlu84" path="res://Images/Mossy/Plant Animations/BlueFlower2/BluePlantClosed_00001.png" id="4_7flps"]
+[ext_resource type="Texture2D" uid="uid://d1vkpq7a0yfo3" path="res://Images/Mossy/Plant Animations/Plant 5/Plant5_00000.png" id="5_b6lsf"]
+[ext_resource type="Texture2D" uid="uid://dotc7aigx5eru" path="res://Images/Mossy/Plant Animations/Plant 6/Plant6_00000.png" id="6_2op1e"]
+[ext_resource type="Texture2D" uid="uid://qn8qygcmuf2b" path="res://Images/Mossy/Plant Animations/Plant 7/Plant7_00000.png" id="7_87qo3"]
+[ext_resource type="Texture2D" uid="uid://bnjek1oc11ndy" path="res://Images/Mossy/Plant Animations/Plant 7/Plant7_00059.png" id="8_rmvqm"]
+[ext_resource type="Texture2D" uid="uid://rgnrrddnndq6" path="res://Images/Mossy/Plant Animations/Plant 1/Plant1_00001.png" id="9_wmml7"]
+[ext_resource type="Texture2D" uid="uid://bdn5nmkoiyn8f" path="res://Images/Mossy/Plant Animations/Plant 8 Poison/PlantPosion_00025.png" id="10_nwy32"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2(1024, 1024)
+transform = Transform2D(1, 0, 0, 1, 1024, 1024)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+scale = Vector2(2, 2)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("1_ck1lt")
+region_rect = Rect2(0, 0, 4096, 4096)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+modulate = Color(0.301961, 0.258824, 0.301961, 1)
+motion_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-715.945, 110.295)
+rotation = -3.14159
+scale = Vector2(0.842097, 0.842097)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(97.4094, 1394.25, 482.282, 1397.48)
+
+[node name="Sprite2D14" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2424, -149)
+rotation = -3.14159
+scale = Vector2(1.28972, 1.28972)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(97.4094, 1394.25, 482.282, 1397.48)
+
+[node name="Sprite2D15" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2966.05, -1514.04)
+rotation = -3.14159
+scale = Vector2(0.257693, 0.257693)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(97.4094, 1394.25, 482.282, 1397.48)
+
+[node name="Sprite2D16" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3199.97, -1576.85)
+rotation = -3.14159
+scale = Vector2(0.382034, 0.382034)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(97.4094, 1394.25, 482.282, 1397.48)
+
+[node name="Sprite2D17" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1288, -1145)
+rotation = -2.96688
+scale = Vector2(0.382034, 0.382034)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(97.4094, 1394.25, 482.282, 1397.48)
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-583, -2136)
+scale = Vector2(0.391157, 0.391157)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(105.004, 80.3172, 368.357, 1241.78)
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-910.986, -2075.86)
+scale = Vector2(0.532535, 0.515482)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(105.004, 80.3172, 368.357, 1241.78)
+
+[node name="LEAF" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(197, -1543)
+rotation = -0.261799
+scale = Vector2(0.532535, 0.515482)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(1213.87, 1701.85, 782.285, 550.637)
+
+[node name="LEAF2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(378.172, -1204.17)
+rotation = -1.0472
+scale = Vector2(0.328376, 0.31786)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(1213.87, 1701.85, 782.285, 550.637)
+
+[node name="LEAF3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(352, -1348)
+rotation = -0.523598
+scale = Vector2(0.384945, 0.344037)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(1213.87, 1701.85, 782.285, 550.637)
+
+[node name="LEAF4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(293, -1348)
+rotation = -0.141102
+scale = Vector2(0.598438, 0.534843)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(1202.48, 2305.65, 797.475, 596.208)
+
+[node name="LEAF5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1343, -886)
+rotation = -0.523598
+scale = Vector2(0.328376, 0.31786)
+texture = ExtResource("3_oh5bb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1213.87, 1701.85, 782.285, 550.637)
+
+[node name="LEAF6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1288, -819)
+rotation = 0.523598
+scale = Vector2(0.384945, 0.344037)
+texture = ExtResource("3_oh5bb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1213.87, 1701.85, 782.285, 550.637)
+
+[node name="LEAF7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1600, -1080)
+rotation = -0.141102
+scale = Vector2(0.598438, 0.534843)
+texture = ExtResource("3_oh5bb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1202.48, 2305.65, 797.475, 596.208)
+
+[node name="LEAF8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1481, -975)
+rotation = 0.379913
+scale = Vector2(0.76224, 0.681237)
+texture = ExtResource("3_oh5bb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1175.9, 1101.84, 770.893, 539.245)
+
+[node name="Flower1" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-2181, -1143)
+rotation = 0.504313
+scale = Vector2(1.19531, 1.19531)
+texture = ExtResource("3_7gtom")
+
+[node name="Flower3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-2038, -1002)
+rotation = 0.794196
+scale = Vector2(1.03377, 1.03377)
+texture = ExtResource("3_7gtom")
+
+[node name="Flower2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-2452, -847)
+rotation = 0.504313
+scale = Vector2(1.19531, 1.19531)
+texture = ExtResource("4_7flps")
+
+[node name="Flower17" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3344.65, -268.351)
+rotation = 0.166568
+scale = Vector2(1.19531, 1.19531)
+texture = ExtResource("3_7gtom")
+
+[node name="Flower18" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3487.65, -127.351)
+rotation = 0.456452
+scale = Vector2(1.03377, 1.03377)
+texture = ExtResource("3_7gtom")
+
+[node name="Flower19" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3073.65, 27.6489)
+rotation = 0.166568
+scale = Vector2(1.19531, 1.19531)
+texture = ExtResource("4_7flps")
+
+[node name="Flower6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1364, -2504)
+rotation = 0.0406899
+scale = Vector2(0.795993, 0.795993)
+texture = ExtResource("5_b6lsf")
+
+[node name="Flower7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1827, -2583)
+rotation = -0.597536
+scale = Vector2(1.04267, 1.04267)
+texture = ExtResource("5_b6lsf")
+
+[node name="Flower8" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(226, -2633)
+rotation = -0.597536
+scale = Vector2(1.04267, 1.04267)
+texture = ExtResource("5_b6lsf")
+
+[node name="Flower9" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(126, -2200)
+rotation = -1.30076
+scale = Vector2(1.3168, 1.3168)
+texture = ExtResource("5_b6lsf")
+
+[node name="Flower10" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(782, -2888)
+rotation = 0.523898
+scale = Vector2(1.3168, 1.3168)
+texture = ExtResource("5_b6lsf")
+
+[node name="Flower11" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(989, -2535)
+rotation = 0.523898
+scale = Vector2(1.3168, 1.3168)
+texture = ExtResource("6_2op1e")
+
+[node name="Flower12" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1009, -2631)
+rotation = 0.523898
+scale = Vector2(1.3168, 1.3168)
+texture = ExtResource("6_2op1e")
+
+[node name="Flower13" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(520.146, -711.549)
+rotation = -2.46201
+scale = Vector2(1.45138, 1.45138)
+texture = ExtResource("7_87qo3")
+
+[node name="Flower14" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(923, 0)
+rotation = -3.09243
+scale = Vector2(1.09871, 1.09871)
+texture = ExtResource("8_rmvqm")
+flip_h = true
+
+[node name="Flower4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1833, -2157)
+rotation = 3.84088
+scale = Vector2(0.830581, 0.830581)
+texture = ExtResource("9_wmml7")
+
+[node name="Flower15" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1283, 161)
+rotation = 3.07745
+scale = Vector2(0.830581, 0.830581)
+texture = ExtResource("10_nwy32")
+
+[node name="Flower16" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1920, 196)
+rotation = 3.07745
+scale = Vector2(0.830581, 0.830581)
+texture = ExtResource("10_nwy32")
+
+[node name="Flower5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1744, -2127)
+rotation = 3.52727
+scale = Vector2(0.716886, 0.716886)
+texture = ExtResource("9_wmml7")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-714, -2173)
+scale = Vector2(0.293405, 0.323701)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(105.004, 80.3172, 368.357, 1241.78)
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-817.493, -2239.72)
+scale = Vector2(0.268985, 0.29676)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(105.004, 80.3172, 368.357, 1241.78)
+
+[node name="Sprite2D12" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1062.75, -2202.18)
+scale = Vector2(0.292101, 0.322263)
+texture = ExtResource("3_oh5bb")
+region_enabled = true
+region_rect = Rect2(105.004, 80.3172, 368.357, 1241.78)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1284, 666)
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(2374.59, 1392.93, 1708.88, 941.78)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(686, -1912)
+rotation = -0.261799
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(8.64941, 29.6968, 1055.71, 4061.53)
+
+[node name="Sprite2D13" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(686, -1912)
+rotation = -0.261799
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(8.64941, 29.6968, 1055.71, 4061.53)
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(3340, -1210)
+rotation = -1.309
+scale = Vector2(0.383749, 0.38375)
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(8.64941, 29.6968, 1055.71, 4061.53)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-2449, -587)
+rotation = -1.57079
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(1190.18, 33.1462, 1036.72, 2365.84)
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-1146, -2422)
+rotation = -1.83259
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(1190.18, 33.1462, 1036.72, 2365.84)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2799.1, 601.518)
+rotation = -1.83259
+scale = Vector2(1.29437, 1.29437)
+texture = ExtResource("2_s77en")
+region_enabled = true
+region_rect = Rect2(1190.18, 33.1462, 1036.72, 2365.84)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+modulate = Color(0.435294, 0.388235, 0.435294, 1)
+motion_scale = Vector2(0.6, 0.6)

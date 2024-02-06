@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://lt1eprx1gblx"]
+
+[ext_resource type="Texture2D" uid="uid://bumyu8xkhajr7" path="res://Images/Sekiro/SekiroPlatform.png" id="1_b2vtj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryneg"]
+texture = ExtResource("1_b2vtj")
+texture_region_size = Vector2i(512, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, 12.8, 256, 12.8, 256, 64, -256, 64)
+
+[sub_resource type="TileSet" id="TileSet_rgheq"]
+tile_size = Vector2i(512, 128)
+physics_layer_0/collision_layer = 2
+sources/0 = SubResource("TileSetAtlasSource_ryneg")
+
+[node name="SekiroGrassPlats" type="TileMap" groups=["walljumpable"]]
+scale = Vector2(1, 0.983051)
+tile_set = SubResource("TileSet_rgheq")
+cell_quadrant_size = 128
+format = 2

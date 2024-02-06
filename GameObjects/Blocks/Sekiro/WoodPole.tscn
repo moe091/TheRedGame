@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://e0wmaesora81"]
+
+[ext_resource type="Texture2D" uid="uid://0ctvynyhk8hf" path="res://Images/Sekiro/WoodPole.png" id="1_h7oex"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i51cy"]
+rough = true
+absorbent = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rolhh"]
+texture = ExtResource("1_h7oex")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-26.6667, -32, 25.6, -32, 25.6, 32, -26.6667, 32)
+
+[sub_resource type="TileSet" id="TileSet_uq54e"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 2
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_i51cy")
+sources/0 = SubResource("TileSetAtlasSource_rolhh")
+
+[node name="SekiroWoodPole" type="TileMap" groups=["walljumpable"]]
+z_index = -1
+tile_set = SubResource("TileSet_uq54e")
+format = 2

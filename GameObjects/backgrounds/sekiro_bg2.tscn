@@ -1,0 +1,195 @@
+[gd_scene load_steps=14 format=3 uid="uid://dqxcaeu85v1ul"]
+
+[ext_resource type="Texture2D" uid="uid://d4etjrkuhdq85" path="res://Images/Sekiro/BG.png" id="1_hpwvt"]
+[ext_resource type="Texture2D" uid="uid://d2w4bodds0vyb" path="res://Images/Sekiro/TowersBack.png" id="2_ywonj"]
+[ext_resource type="Texture2D" uid="uid://bd2rfek58wgfu" path="res://Images/Sekiro/Clouds.png" id="3_qma6f"]
+[ext_resource type="Texture2D" uid="uid://fvm4bc55kthm" path="res://Images/Sekiro/OldMountains1.png" id="4_nsrk5"]
+[ext_resource type="Texture2D" uid="uid://devoipd1fl1q6" path="res://Images/Sekiro/OldMountains2.png" id="5_mdxc3"]
+[ext_resource type="Texture2D" uid="uid://huf42vpkfeyu" path="res://Images/Sekiro/OldMountains3.png" id="6_wlrev"]
+[ext_resource type="Texture2D" uid="uid://bk07htt8svsl3" path="res://Images/Sekiro/OldMountains4.png" id="7_767te"]
+[ext_resource type="Texture2D" uid="uid://bfkf6751t4s83" path="res://Images/Sekiro/OldMountains5.png" id="8_1qnax"]
+[ext_resource type="Texture2D" uid="uid://cnlcugjewuayk" path="res://Images/Sekiro/OldMountains6.png" id="9_c0psy"]
+[ext_resource type="Texture2D" uid="uid://djwudp4ikwywl" path="res://Images/Sekiro/OldMountains7.png" id="10_g4i2x"]
+[ext_resource type="Texture2D" uid="uid://ykg1tkd56nw8" path="res://Images/Sekiro/OldMountains8.png" id="11_0b3wh"]
+[ext_resource type="Texture2D" uid="uid://c8y1wauwpvgnj" path="res://Images/Sekiro/OldMountains9.png" id="12_0qjrr"]
+[ext_resource type="Texture2D" uid="uid://56iyvcjwdn6d" path="res://Images/Sekiro/oldMountains10.png" id="13_o4j5u"]
+
+[node name="SekiroBG" type="ParallaxBackground"]
+offset = Vector2(0, 540)
+transform = Transform2D(1, 0, 0, 1, 0, 540)
+
+[node name="BG" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="SekiroBG" type="Sprite2D" parent="BG"]
+texture_repeat = 2
+scale = Vector2(1, 1.00376)
+texture = ExtResource("1_hpwvt")
+offset = Vector2(960, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="TowersBack" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.01, 0.01)
+
+[node name="TowersBack" type="Sprite2D" parent="TowersBack"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("2_ywonj")
+offset = Vector2(0, -480)
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 1080)
+
+[node name="TowersFront" type="ParallaxLayer" parent="."]
+visible = false
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.03, 0.03)
+
+[node name="TowersFront" type="Sprite2D" parent="TowersFront"]
+texture_repeat = 3
+position = Vector2(-6, 26)
+offset = Vector2(0, -400)
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 1080)
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 250)
+motion_scale = Vector2(0.03, 0.03)
+
+[node name="SekiroClouds" type="Sprite2D" parent="Clouds"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("3_qma6f")
+offset = Vector2(0, -370)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains1" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.05, 0.05)
+
+[node name="Mountains1" type="Sprite2D" parent="Mountains1"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("4_nsrk5")
+offset = Vector2(333, -390)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.09, 0.09)
+
+[node name="Mountains2" type="Sprite2D" parent="Mountains2"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("5_mdxc3")
+offset = Vector2(55, -270)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.14, 0.14)
+
+[node name="Mountains3" type="Sprite2D" parent="Mountains3"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("6_wlrev")
+offset = Vector2(-120, -250)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.18, 0.18)
+
+[node name="Mountains4" type="Sprite2D" parent="Mountains4"]
+texture_repeat = 3
+position = Vector2(0, -40)
+texture = ExtResource("7_767te")
+offset = Vector2(100, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains5" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.21, 0.21)
+
+[node name="Mountains5" type="Sprite2D" parent="Mountains5"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("8_1qnax")
+offset = Vector2(-220, -200)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains6" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.24, 0.24)
+
+[node name="Mountains6" type="Sprite2D" parent="Mountains6"]
+texture_repeat = 3
+texture = ExtResource("9_c0psy")
+offset = Vector2(-40, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains7" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.27, 0.27)
+
+[node name="Mountains7" type="Sprite2D" parent="Mountains7"]
+texture_repeat = 3
+texture = ExtResource("10_g4i2x")
+offset = Vector2(130, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains8" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+scale = Vector2(1.00577, 1)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Mountains8" type="Sprite2D" parent="Mountains8"]
+texture_repeat = 3
+texture = ExtResource("11_0b3wh")
+offset = Vector2(77, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains9" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.33, 0.33)
+
+[node name="Mountains9" type="Sprite2D" parent="Mountains9"]
+texture_repeat = 3
+texture = ExtResource("12_0qjrr")
+offset = Vector2(-90, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains10" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.39, 0.39)
+
+[node name="Mountains10" type="Sprite2D" parent="Mountains10"]
+texture_repeat = 3
+texture = ExtResource("13_o4j5u")
+offset = Vector2(-90, 620)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)

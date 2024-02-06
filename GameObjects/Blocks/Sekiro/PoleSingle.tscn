@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://pjb4qvixwt3q"]
+
+[ext_resource type="Texture2D" uid="uid://0ctvynyhk8hf" path="res://Images/Sekiro/WoodPole.png" id="1_m83fx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnw01"]
+size = Vector2(52, 512)
+
+[node name="WoodPole" type="StaticBody2D" groups=["walljumpable"]]
+z_index = -3
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m83fx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rnw01")

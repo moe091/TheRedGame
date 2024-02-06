@@ -1,0 +1,126 @@
+[gd_scene load_steps=13 format=3 uid="uid://7hgxuneehfba"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerNode.gd" id="1_7it41"]
+[ext_resource type="Texture2D" uid="uid://dh1ii1kq3451o" path="res://Images/ball.png" id="2_411d1"]
+[ext_resource type="Script" path="res://Scripts/PlayerBody.gd" id="2_dbmf0"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_nk4rl"]
+[ext_resource type="Script" path="res://GameObjects/Camera2D.gd" id="3_nkgyv"]
+[ext_resource type="PackedScene" uid="uid://crkxc2qskyqp2" path="res://GameObjects/UI/GameTimer.tscn" id="4_3jinl"]
+[ext_resource type="Script" path="res://Prefabs/LeftHand.gd" id="5_pypk8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_45fsf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08cdj"]
+radius = 10.5
+
+[sub_resource type="Gradient" id="Gradient_txakh"]
+offsets = PackedFloat32Array(0, 0.619355)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_47ov3"]
+gradient = SubResource("Gradient_txakh")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyf1g"]
+size = Vector2(8.00005, 3)
+
+[node name="PlayerNode" type="Node2D"]
+script = ExtResource("1_7it41")
+jumpVector = Vector2(0, -175)
+doubleJumpPower = -220
+jumpingPlus = -75
+wallJumpXPower = 180
+wallJumpYPower = -200
+dashPower = 180
+angularAccel = 2000
+linearAccel = 200
+
+[node name="Player" type="RigidBody2D" parent="."]
+collision_mask = 30
+mass = 0.23
+inertia = 55.32
+physics_material_override = SubResource("PhysicsMaterial_45fsf")
+gravity_scale = 1.5
+continuous_cd = 2
+max_contacts_reported = 5
+contact_monitor = true
+linear_damp = 1.0
+angular_damp_mode = 1
+script = ExtResource("2_dbmf0")
+
+[node name="BallSprite" type="Sprite2D" parent="Player"]
+scale = Vector2(0.667, 0.667)
+texture = ExtResource("2_411d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_08cdj")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../center")
+update_rotation = false
+update_scale = false
+
+[node name="center" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="center"]
+offset = Vector2(0, -240)
+position_smoothing_speed = 10.0
+script = ExtResource("3_nkgyv")
+zoomModifier = 1.0
+
+[node name="GameTimer" parent="center/Camera2D" instance=ExtResource("4_3jinl")]
+z_index = 4000
+offset_left = -1825.0
+offset_top = 931.0
+offset_right = -1636.0
+offset_bottom = 1033.0
+
+[node name="PointLight2D" type="PointLight2D" parent="center/Camera2D"]
+scale = Vector2(85, 85)
+color = Color(0.996078, 0.960784, 0.984314, 1)
+energy = 1.1
+blend_mode = 2
+range_layer_min = -111
+range_layer_max = 111
+shadow_color = Color(0, 0, 0, 0.67451)
+texture = SubResource("GradientTexture2D_47ov3")
+
+[node name="Feet" type="Area2D" parent="center" groups=["Feet"]]
+position = Vector2(0, -27)
+scale = Vector2(2, 2)
+collision_mask = 2
+script = ExtResource("3_nk4rl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center/Feet"]
+position = Vector2(0, 25)
+shape = SubResource("RectangleShape2D_dyf1g")
+
+[node name="LeftHand" type="Area2D" parent="center" groups=["Feet"]]
+rotation = 1.5708
+scale = Vector2(2, 2)
+collision_mask = 2
+script = ExtResource("5_pypk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center/LeftHand"]
+position = Vector2(4.19617e-05, 11.5)
+shape = SubResource("RectangleShape2D_dyf1g")
+
+[node name="RightHand" type="Area2D" parent="center" groups=["Feet"]]
+rotation = -1.5708
+scale = Vector2(2, 2)
+collision_mask = 2
+script = ExtResource("5_pypk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="center/RightHand"]
+position = Vector2(-6.86646e-05, 11.5)
+shape = SubResource("RectangleShape2D_dyf1g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="center"]
+follow_viewport_enabled = true
+
+[connection signal="body_entered" from="Player" to="." method="_on_player_body_entered"]
+[connection signal="body_entered" from="center/Feet" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="center/LeftHand" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="center/RightHand" to="Player" method="_on_area_2d_body_entered"]

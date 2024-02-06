@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://1kvwrnubxt4u"]
+
+[ext_resource type="Texture2D" uid="uid://dkswv4m4il6q6" path="res://Images/ai2/Hazards/Laser1.png" id="2_k6ggf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xslf4"]
+size = Vector2(1022, 16)
+
+[node name="Laser1" type="StaticBody2D" groups=["kill_on_hit"]]
+z_index = -4
+collision_layer = 4
+
+[node name="SawSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("2_k6ggf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill_on_hit"]]
+shape = SubResource("RectangleShape2D_xslf4")

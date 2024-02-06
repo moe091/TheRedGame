@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://c25hp6bpnqiej"]
+
+[ext_resource type="PackedScene" uid="uid://0uvtsgnsbws3" path="res://GameObjects/backgrounds/kanou_bg_1.tscn" id="1_hd8bv"]
+[ext_resource type="PackedScene" uid="uid://7hgxuneehfba" path="res://GameObjects/MainPlayer.tscn" id="2_7udhr"]
+[ext_resource type="PackedScene" uid="uid://cgh3rfrundmbl" path="res://GameObjects/Blocks/moss/mossy_platform_1.tscn" id="3_8ce5d"]
+[ext_resource type="PackedScene" uid="uid://byndrae33hb8i" path="res://GameObjects/Premades/big_moss.tscn" id="4_evvmi"]
+[ext_resource type="PackedScene" uid="uid://lkc33w7r836b" path="res://GameObjects/Premades/tall_moss.tscn" id="5_ocwad"]
+[ext_resource type="PackedScene" uid="uid://dl4w2l2cuf4gs" path="res://GameObjects/Blocks/tile_block_red.tscn" id="7_27t2e"]
+[ext_resource type="PackedScene" uid="uid://cbfccltf2u543" path="res://GameObjects/Obstacles/KillPlant.tscn" id="11_ic8gj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_hd8bv")]
+offset = Vector2(1080, 540)
+scale = Vector2(1, 1)
+transform = Transform2D(1, 0, 0, 1, 1080, 540)
+
+[node name="PlayerNode" parent="." instance=ExtResource("2_7udhr")]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(0, -22)
+
+[node name="floatingPlatform" parent="." instance=ExtResource("3_8ce5d")]
+position = Vector2(-3188, -1350)
+
+[node name="BigMoss" parent="." instance=ExtResource("4_evvmi")]
+position = Vector2(-928, 192)
+
+[node name="BigMoss2" parent="." instance=ExtResource("4_evvmi")]
+position = Vector2(1056, -831)
+rotation = 1.5708
+
+[node name="TallMoss1" parent="." instance=ExtResource("5_ocwad")]
+
+[node name="KillPlant" parent="." instance=ExtResource("11_ic8gj")]
+z_index = -1
+position = Vector2(-651, -3229)
+rotation = 3.14159
+scale = Vector2(0.8, 0.8)
+
+[node name="TallMoss2" parent="." instance=ExtResource("5_ocwad")]
+position = Vector2(0, -2208)
+
+[node name="KillPlant2" parent="." instance=ExtResource("11_ic8gj")]
+z_index = -1
+position = Vector2(-651, -3904)
+scale = Vector2(0.8, 0.8)
+
+[node name="TileMap" parent="." instance=ExtResource("7_27t2e")]
+scale = Vector2(0.290249, 1.51299)

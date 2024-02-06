@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ejwgrjdss7kj"]
+
+[ext_resource type="Texture2D" uid="uid://25ie4bkhdn08" path="res://Images/starry_night/plat1.png" id="1_rb6v3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wum6o"]
+size = Vector2(898, 98)
+
+[node name="StarryPlat" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wum6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rb6v3")

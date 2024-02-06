@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bquqek2rig0ue"]
+
+[ext_resource type="Texture2D" uid="uid://bl4cti2jdc73j" path="res://Images/ssss/windmill.png" id="1_hugl0"]
+[ext_resource type="Script" path="res://WindmillSprite.gd" id="2_4kg26"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oe0y4"]
+
+[node name="Windmill" type="StaticBody2D"]
+collision_layer = 4
+
+[node name="WindmillSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_hugl0")
+script = ExtResource("2_4kg26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(24.28, 24.28)
+shape = SubResource("CircleShape2D_oe0y4")

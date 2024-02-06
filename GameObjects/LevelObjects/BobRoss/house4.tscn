@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkgjmm7svgfd1"]
+
+[ext_resource type="Texture2D" uid="uid://bs4b5mivlgvl" path="res://Images/BOBROSS/House4.png" id="1_yb3n2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1ok0"]
+size = Vector2(1286, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnnmg"]
+size = Vector2(45, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6p35"]
+size = Vector2(47, 280)
+
+[node name="House" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yb3n2")
+
+[node name="Shapes" type="StaticBody2D" parent="."]
+position = Vector2(0, -238)
+collision_layer = 2
+
+[node name="Roof" type="CollisionShape2D" parent="Shapes"]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_p1ok0")
+
+[node name="Floor" type="CollisionShape2D" parent="Shapes"]
+position = Vector2(4, 474)
+shape = SubResource("RectangleShape2D_p1ok0")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Shapes"]
+position = Vector2(-616.5, 239)
+shape = SubResource("RectangleShape2D_bnnmg")
+
+[node name="RightWall" type="CollisionShape2D" parent="Shapes"]
+position = Vector2(623.5, 159)
+shape = SubResource("RectangleShape2D_d6p35")

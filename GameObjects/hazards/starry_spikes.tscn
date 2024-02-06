@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://g1fudesnfuat"]
+
+[ext_resource type="Texture2D" uid="uid://cdu1d0v07d6ra" path="res://Images/starry_night/starry_spikes.png" id="1_yrtpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xslf4"]
+size = Vector2(110, 104)
+
+[node name="StarrySpikes" type="StaticBody2D" groups=["kill_on_hit"]]
+z_index = -4
+collision_layer = 4
+
+[node name="SpikesSprite" type="Sprite2D" parent="."]
+position = Vector2(1, -8)
+texture = ExtResource("1_yrtpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill_on_hit"]]
+shape = SubResource("RectangleShape2D_xslf4")

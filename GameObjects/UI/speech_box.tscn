@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://dscdop40mqipr"]
+
+[ext_resource type="Texture2D" uid="uid://xxvlgrgg7ueq" path="res://Images/UI/TextBox.png" id="1_25ucu"]
+[ext_resource type="Script" path="res://Scripts/UI/speech_box.gd" id="2_huv4n"]
+
+[sub_resource type="SystemFont" id="SystemFont_v3vlv"]
+
+[sub_resource type="Theme" id="Theme_25nd1"]
+default_font = SubResource("SystemFont_v3vlv")
+default_font_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bu357"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82ni8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 3.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_f8xgq"]
+font_size = 22
+font_color = Color(0, 0, 0.12549, 1)
+outline_size = 2
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.470588)
+
+[node name="SpeechBubble" type="BoxContainer"]
+offset_right = 256.0
+offset_bottom = 174.0
+size_flags_horizontal = 3
+script = ExtResource("2_huv4n")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-225, -105)
+scale = Vector2(1.32, 1.05469)
+texture = ExtResource("1_25ucu")
+centered = false
+region_rect = Rect2(0, 0, 250, 220)
+
+[node name="Text" type="RichTextLabel" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+theme = SubResource("Theme_25nd1")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 14
+theme_override_styles/focus = SubResource("StyleBoxFlat_bu357")
+theme_override_styles/normal = SubResource("StyleBoxFlat_82ni8")
+text = "TESTsdf
+asdfasdf
+asdfaws
+dfa
+sfasdf"
+fit_content = true
+scroll_active = false
+
+[node name="Continue" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "F ->"
+label_settings = SubResource("LabelSettings_f8xgq")

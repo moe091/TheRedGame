@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsmwjiiek0p3r"]
+
+[ext_resource type="Texture2D" uid="uid://d2bs11m1o572a" path="res://Images/levels/1/blacksquare.png" id="1_3fj0y"]
+[ext_resource type="Texture2D" uid="uid://beelu5yyi3h52" path="res://Images/levels/2/grassplat.png" id="2_vkcih"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ln6oc"]
+texture = ExtResource("1_3fj0y")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ucgmq"]
+texture = ExtResource("2_vkcih")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 32, 0, 32, 22.4, -32, 22.4)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 32, 0, 32, 22.4, -32, 22.4)
+
+[sub_resource type="TileSet" id="TileSet_6p7pk"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 1009
+sources/0 = SubResource("TileSetAtlasSource_ln6oc")
+sources/1 = SubResource("TileSetAtlasSource_ucgmq")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_6p7pk")
+format = 2

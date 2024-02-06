@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://dged7pls8hpdm"]
+
+[ext_resource type="Script" path="res://GameObjects/NPCs/NPC.gd" id="1_ni7xo"]
+[ext_resource type="Texture2D" uid="uid://b5os4hcrdf3pu" path="res://Images/General/oldguy_back.png" id="2_ylm4b"]
+[ext_resource type="Texture2D" uid="uid://duacqabw5v0f0" path="res://Images/General/oldguy_front.png" id="3_bdovl"]
+[ext_resource type="PackedScene" uid="uid://dscdop40mqipr" path="res://GameObjects/UI/speech_box.tscn" id="4_qmktv"]
+[ext_resource type="Texture2D" uid="uid://crjwt7rmufn7e" path="res://Images/UI/InteractIcon.png" id="5_kg77a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ux06h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4g7p8"]
+size = Vector2(134.615, 122.308)
+
+[node name="NPC" type="Node2D"]
+z_index = -1
+scale = Vector2(5.2, 5.2)
+script = ExtResource("1_ni7xo")
+
+[node name="Body" type="RigidBody2D" parent="."]
+collision_layer = 16
+collision_mask = 14
+mass = 0.16
+inertia = 2.87
+linear_damp_mode = 1
+angular_damp_mode = 1
+
+[node name="AttachedSprite" type="Sprite2D" parent="Body"]
+z_index = -1
+texture = ExtResource("2_ylm4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+scale = Vector2(5.2, 5.2)
+shape = SubResource("CircleShape2D_ux06h")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Body"]
+remote_path = NodePath("../../Anchor")
+update_rotation = false
+
+[node name="Anchor" type="Node2D" parent="."]
+
+[node name="AnchoredSprite" type="Sprite2D" parent="Anchor"]
+z_index = -1
+texture = ExtResource("3_bdovl")
+
+[node name="SpeechBox" parent="Anchor" instance=ExtResource("4_qmktv")]
+offset_left = -126.538
+offset_top = -234.615
+offset_right = 129.462
+offset_bottom = -60.6154
+
+[node name="InteractableArea" type="Area2D" parent="Anchor"]
+collision_layer = 2048
+collision_mask = 1024
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor/InteractableArea"]
+shape = SubResource("RectangleShape2D_4g7p8")
+
+[node name="InteractIcon" type="Sprite2D" parent="Anchor"]
+position = Vector2(0, -54.0385)
+texture = ExtResource("5_kg77a")
+
+[connection signal="area_entered" from="Anchor/InteractableArea" to="." method="_on_interactable_area_entered"]
+[connection signal="area_exited" from="Anchor/InteractableArea" to="." method="_on_interactable_area_exited"]

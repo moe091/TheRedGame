@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nd4ubaorqhcc"]
+
+[ext_resource type="Texture2D" uid="uid://voc7vdpmct25" path="res://Images/BOBROSS/SpikeVine.png" id="1_y2hrh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xslf4"]
+size = Vector2(56, 338.697)
+
+[node name="SpikeVine" type="StaticBody2D" groups=["kill_on_hit"]]
+z_index = -4
+collision_layer = 4
+
+[node name="SpikesSprite" type="Sprite2D" parent="."]
+position = Vector2(1, -6)
+scale = Vector2(1, 1.12)
+texture = ExtResource("1_y2hrh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["kill_on_hit"]]
+scale = Vector2(1, 1.12785)
+shape = SubResource("RectangleShape2D_xslf4")

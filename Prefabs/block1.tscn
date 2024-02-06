@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://boh78rooa44dx"]
+
+[ext_resource type="Texture2D" uid="uid://dpgj5tqm8qo4i" path="res://Images/block1.png" id="1_6w3r8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbuu2"]
+size = Vector2(246, 246)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71ffo"]
+size = Vector2(246, 6)
+
+[node name="Block1" type="StaticBody2D" groups=["walljumpable"]]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rbuu2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6w3r8")
+
+[node name="Area2D" type="Area2D" parent="." groups=["jumpable"]]
+
+[node name="JumpArea" type="CollisionShape2D" parent="Area2D" groups=["jumpable"]]
+position = Vector2(0, -120)
+shape = SubResource("RectangleShape2D_71ffo")

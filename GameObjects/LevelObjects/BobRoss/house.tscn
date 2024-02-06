@@ -1,0 +1,158 @@
+[gd_scene load_steps=17 format=3 uid="uid://c2aqq1pdkg77w"]
+
+[ext_resource type="Texture2D" uid="uid://cv24iunlktled" path="res://Images/BOBROSS/House.png" id="1_hubqn"]
+[ext_resource type="Script" path="res://Scripts/Level1/house.gd" id="1_j3ll7"]
+[ext_resource type="Texture2D" uid="uid://en036q6c4dc6" path="res://Images/BOBROSS/BrokenWood.png" id="3_vwc7p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1ok0"]
+size = Vector2(881, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnnmg"]
+size = Vector2(44.5, 389)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6p35"]
+size = Vector2(44, 267.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idexa"]
+size = Vector2(14, 119)
+
+[sub_resource type="Gradient" id="Gradient_q30lv"]
+offsets = PackedFloat32Array(0.651852, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kwv0f"]
+gradient = SubResource("Gradient_q30lv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cda4x"]
+emission_shape = 3
+emission_box_extents = Vector3(50, 12, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 35.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 350.0
+initial_velocity_max = 450.0
+angular_velocity_min = -200.0
+angular_velocity_max = 200.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -30.0
+angle_max = 30.0
+scale_min = 0.6
+scale_max = 1.25
+color_ramp = SubResource("GradientTexture1D_kwv0f")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6rbl"]
+size = Vector2(185.5, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apa82"]
+size = Vector2(186.5, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w4a0"]
+size = Vector2(33.5, 131)
+
+[sub_resource type="Gradient" id="Gradient_nid6d"]
+offsets = PackedFloat32Array(0.703704, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xqu5h"]
+gradient = SubResource("Gradient_nid6d")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f81l4"]
+emission_shape = 3
+emission_box_extents = Vector3(1, 12, 1)
+particle_flag_disable_z = true
+direction = Vector3(1, 0.2, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 400.0
+initial_velocity_max = 500.0
+angular_velocity_min = -180.0
+angular_velocity_max = 180.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = 60.0
+angle_max = 120.0
+scale_min = 0.6
+color_ramp = SubResource("GradientTexture1D_xqu5h")
+
+[node name="House" type="Node2D"]
+script = ExtResource("1_j3ll7")
+
+[node name="HouseSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_hubqn")
+
+[node name="HouseBody1" type="StaticBody2D" parent="."]
+position = Vector2(0, -238)
+collision_layer = 32
+
+[node name="Roof" type="CollisionShape2D" parent="HouseBody1"]
+position = Vector2(0.5, 67.5)
+shape = SubResource("RectangleShape2D_p1ok0")
+
+[node name="LeftWall" type="CollisionShape2D" parent="HouseBody1"]
+position = Vector2(-421.25, 283.5)
+shape = SubResource("RectangleShape2D_bnnmg")
+
+[node name="RightWall" type="CollisionShape2D" parent="HouseBody1"]
+position = Vector2(421, 223.25)
+shape = SubResource("RectangleShape2D_d6p35")
+
+[node name="Door" type="CollisionShape2D" parent="HouseBody1"]
+position = Vector2(419, 416.5)
+shape = SubResource("RectangleShape2D_idexa")
+
+[node name="JohnsonsenCollider1" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionParticles1" type="GPUParticles2D" parent="JohnsonsenCollider1"]
+position = Vector2(-161, -168)
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_cda4x")
+texture = ExtResource("3_vwc7p")
+one_shot = true
+explosiveness = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JohnsonsenCollider1"]
+position = Vector2(-155, -221)
+shape = SubResource("RectangleShape2D_s6rbl")
+
+[node name="JohnsensonCollider2" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JohnsensonCollider2"]
+position = Vector2(177, -223)
+shape = SubResource("RectangleShape2D_apa82")
+
+[node name="CollisionParticles2" type="GPUParticles2D" parent="JohnsensonCollider2"]
+position = Vector2(173, -173)
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_cda4x")
+texture = ExtResource("3_vwc7p")
+one_shot = true
+explosiveness = 1.0
+
+[node name="JohnsensonCollider3" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JohnsensonCollider3"]
+position = Vector2(414.75, 172.5)
+shape = SubResource("RectangleShape2D_7w4a0")
+
+[node name="CollisionParticles3" type="GPUParticles2D" parent="JohnsensonCollider3"]
+z_index = 2
+position = Vector2(421, 170)
+emitting = false
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_f81l4")
+texture = ExtResource("3_vwc7p")
+one_shot = true
+explosiveness = 1.0
+
+[connection signal="body_entered" from="JohnsonsenCollider1" to="." method="_on_johnsonsen_collider_1_body_entered"]
+[connection signal="body_entered" from="JohnsensonCollider2" to="." method="_on_johnsenson_collider_2_body_entered"]
+[connection signal="body_entered" from="JohnsensonCollider3" to="." method="_on_johnsenson_collider_3_body_entered"]

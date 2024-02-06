@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2ncp4ubuxsng"]
+
+[ext_resource type="Texture2D" uid="uid://brifiiwyvsdk3" path="res://Images/grassplat1.png" id="1_fkvky"]
+
+[node name="Plat2" type="RigidBody2D" groups=["Floor"]]
+collision_layer = 3
+collision_mask = 3
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fkvky")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-492, -111, 493, -111, 493, -45, 400, -50, 344, -10, 241, -1, 199, 77, 96, 43, -78, 75, -232, -15, -284, 17, -373, 34, -416, 0, -416, -38, -492, -73, -492, -74)

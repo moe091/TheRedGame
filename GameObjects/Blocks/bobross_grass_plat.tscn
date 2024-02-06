@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddnjk6syawrhy"]
+
+[ext_resource type="Texture2D" uid="uid://2m64gjcqyhii" path="res://Images/BOBROSS/grassplat.png" id="2_6npow"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2s7wy"]
+texture = ExtResource("2_6npow")
+texture_region_size = Vector2i(512, 80)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -8, 256, -8, 256, 40, -256, 40)
+
+[sub_resource type="TileSet" id="TileSet_rgheq"]
+tile_size = Vector2i(511, 80)
+physics_layer_0/collision_layer = 2
+sources/1 = SubResource("TileSetAtlasSource_2s7wy")
+
+[node name="BobRossGrassPlat" type="TileMap" groups=["walljumpable"]]
+scale = Vector2(1, 0.983051)
+tile_set = SubResource("TileSet_rgheq")
+cell_quadrant_size = 128
+format = 2

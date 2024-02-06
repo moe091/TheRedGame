@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8sitx5pingj8"]
+
+[ext_resource type="Script" path="res://GameObjects/Special/gravity_down.gd" id="1_7apjq"]
+[ext_resource type="Texture2D" uid="uid://b8wbu62pbl2x6" path="res://Images/General/GravityDown.png" id="2_mfsnu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8btt"]
+
+[node name="GravityDown" type="Area2D"]
+script = ExtResource("1_7apjq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mfsnu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.52, 6.53714)
+shape = SubResource("RectangleShape2D_d8btt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

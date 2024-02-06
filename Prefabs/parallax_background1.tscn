@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://chpon4wfxvy2w"]
+
+[ext_resource type="Texture2D" uid="uid://bo5w2xjp5xt5t" path="res://Images/texture1.png" id="1_ot3f3"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2(1024, 1024)
+transform = Transform2D(1, 0, 0, 1, 1024, 1024)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(2048, 2048)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("1_ot3f3")
+region_enabled = true
+region_rect = Rect2(0, 0, 4096, 4096)

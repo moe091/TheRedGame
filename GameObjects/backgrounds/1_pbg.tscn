@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsw873s4fmvk8"]
+
+[ext_resource type="Texture2D" uid="uid://cr61y8d68650h" path="res://Images/levels/2/sky.png" id="1_k75xy"]
+[ext_resource type="Texture2D" uid="uid://c2apnuwimnar" path="res://Images/levels/2/clouds_1.png" id="2_q6ckp"]
+[ext_resource type="Texture2D" uid="uid://j33k6cyoyytt" path="res://Images/levels/2/clouds_2.png" id="3_nnr1s"]
+[ext_resource type="Texture2D" uid="uid://dcj1fwmk56dc0" path="res://Images/levels/2/clouds_3.png" id="4_5fnxu"]
+[ext_resource type="Texture2D" uid="uid://b6j6aula3s63" path="res://Images/levels/2/clouds_4.png" id="5_0xjx5"]
+[ext_resource type="Texture2D" uid="uid://bpixy1donqk5n" path="res://Images/levels/2/rocks_1.png" id="6_d13jx"]
+[ext_resource type="Texture2D" uid="uid://bss1fvrwjkps5" path="res://Images/levels/2/rocks_2.png" id="7_hlc46"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(960, 540)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("1_k75xy")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.05, 0.05)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+texture_repeat = 3
+texture = ExtResource("2_q6ckp")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Rocks" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.065, 0.065)
+
+[node name="Sprite2D" type="Sprite2D" parent="Rocks"]
+texture_repeat = 3
+texture = ExtResource("3_nnr1s")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.08, 0.08)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+texture_repeat = 3
+texture = ExtResource("4_5fnxu")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.11, 0.11)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+texture_repeat = 3
+texture = ExtResource("5_0xjx5")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.15, 0.15)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+texture_repeat = 3
+texture = ExtResource("6_d13jx")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+texture_repeat = 3
+position = Vector2(960, 540)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6"]
+texture_repeat = 3
+texture = ExtResource("7_hlc46")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)

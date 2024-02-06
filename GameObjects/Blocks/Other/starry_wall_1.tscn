@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw1n3axnkemuy"]
+
+[ext_resource type="Texture2D" uid="uid://l3btxalji4rl" path="res://Images/starry_night/starry_wall.png" id="1_4bt44"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mj6uu"]
+texture = ExtResource("1_4bt44")
+texture_region_size = Vector2i(72, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-36, -50, 36, -50, 36, 50, -36, 50)
+
+[sub_resource type="TileSet" id="TileSet_rgheq"]
+tile_size = Vector2i(72, 100)
+physics_layer_0/collision_layer = 2
+sources/3 = SubResource("TileSetAtlasSource_mj6uu")
+
+[node name="StarryWall1" type="TileMap" groups=["walljumpable"]]
+tile_set = SubResource("TileSet_rgheq")
+cell_quadrant_size = 128
+format = 2

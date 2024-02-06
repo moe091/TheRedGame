@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://csd5nin7v2npu"]
+
+[ext_resource type="Texture2D" uid="uid://nix3vo6x7rly" path="res://Images/starry_night/stained_texture.png" id="1_8j6q6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qkr31"]
+texture = ExtResource("1_8j6q6")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1bc3g"]
+tile_size = Vector2i(512, 512)
+sources/0 = SubResource("TileSetAtlasSource_qkr31")
+
+[node name="StainedStarryTexture" type="TileMap"]
+z_index = -7
+tile_set = SubResource("TileSet_1bc3g")
+format = 2

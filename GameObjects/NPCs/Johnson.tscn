@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0tqk6v3pw8l1"]
+
+[ext_resource type="PackedScene" uid="uid://dged7pls8hpdm" path="res://GameObjects/NPCs/NPC.tscn" id="1_dvdxn"]
+[ext_resource type="Texture2D" uid="uid://c4iff7yca2aau" path="res://Images/General/oldguy_hat.png" id="2_2wjc1"]
+[ext_resource type="Script" path="res://Scripts/NPC/Johnson.gd" id="2_27tty"]
+
+[node name="Johnson" instance=ExtResource("1_dvdxn")]
+script = ExtResource("2_27tty")
+
+[node name="Body" parent="." index="0" groups=["johnson"]]
+
+[node name="SpeechBox" parent="Anchor" index="1"]
+visible = false
+
+[node name="Hat" type="Sprite2D" parent="Anchor" index="2"]
+z_index = -1
+position = Vector2(9.03846, -56.3462)
+texture = ExtResource("2_2wjc1")
+
+[node name="InteractIcon" parent="Anchor" index="4"]
+visible = false

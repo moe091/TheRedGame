@@ -1,0 +1,238 @@
+{
+  "name": "johnson1",
+  "type": "chain",
+  "events": [
+	{
+	  "eventName": "m_spawnJohnson",
+	  "type": "method",
+	  "data": "spawnJohnson",
+	  "parent": "johnson",
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_youngOne",
+	  "type": "dialog",
+	  "data": "Young one!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_madmanBack",
+	  "type": "dialog",
+	  "data": "Have you heard? The madman is back, he's in the square right now, ramblings his ramblings!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_teachableMoment",
+	  "type": "dialog",
+	  "data": "I came down to the first to find you as soon as I heard. What a teachable moment!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_laughNinth",
+	  "type": "dialog",
+	  "data": "The others on the ninth laugh at me, they wouldn't be caught dead on the first. But they all lack my humility... Not to mention my wisdom!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_spillWisdom",
+	  "type": "dialog",
+	  "data": "No need to thank me, young pupil. I've come not for praise, but to spill out a few drops of my wisdom, lest I overflow.",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_followMe",
+	  "type": "dialog",
+	  "data": "Now lets get going. This way, follow me!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "m_jumpJohnson1",
+	  "type": "method",
+	  "data": "jumpJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "preDelay": 0.3,
+	  "postDelay": 3.2,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_frontDoor",
+	  "type": "dialog",
+	  "data": "On second thought, lets just take the front door.",
+	  "parent": "johnson",
+	  "preDelay": 0.3,
+	  "interactable": true
+	},
+	{
+	  "eventName": "m_leaveJohnson1",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "postDelay": 4.3,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "m_stopJohnson1",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_firstObstacle",
+	  "type": "dialog",
+	  "parent": "johnson",
+	  "data": "Ah, our first obstacle! What you'll wanna do is build up enough speed and SMASH right through. Allow me to demonstrate",
+	  "interactable": true
+	},
+	{
+	  "eventName": "m_leaveJohnson2",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "postDelay": 1.8,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "m_stopJohnson2",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_itsDone",
+	  "type": "dialog",
+	  "data": "That's how it's done! You can give it a go on the next one.",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "m_leaveJohnson3",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "postDelay": 3.8,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "m_stopJohnson3",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_showLearned",
+	  "type": "dialog",
+	  "data": "Perfect! He's your chance to show what you've learned. Lets see you get past this next obstacle.",
+	  "parent": "johnson",
+	  "condition": "playerPastX",
+	  "args": 5200,
+	  "sideEvents": [
+		"playerEvents1.tryJumping"
+	  ]
+	},
+	{
+	  "eventName": "m_leaveJohnson4",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "postDelay": 1.5,
+	  "triggerNext": true,
+	  "cancelEvents": [
+		"playerEvents1.tryJumping"
+	  ]
+	},
+	{
+	  "eventName": "m_stopJohnson4",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_greatJob",
+	  "type": "dialog",
+	  "data": "Creative solution, young one! I should've known my method is a bit too advanced, but under my tutelage you'll get there in no time!",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "m_leaveJohnson5",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "hidePreviousDialog": true,
+	  "postDelay": 3,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "m_stopJohnson4",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_liftBroken",
+	  "type": "dialog",
+	  "data": "Yet another conundrum! We must get up there somehow. There's a lift, but it appears the controls are up above. Hmmm....",
+	  "parent": "johnson",
+	  "interactable": true
+	},
+	{
+	  "eventName": "d_liftBroken2",
+	  "type": "dialog",
+	  "data": "I've devised a solution of my own, but I'd prefer to see what you can come up. This test will be a great way to assess your abilities. Let's see what you can do, young one!",
+	  "parent": "johnson",
+	  "condition": "checkpoint.jumpCheckpoint",
+	  "args": 11200,
+	  "sideEvents": [
+		"playerEvents1.tryWalljumping"
+	  ]
+	},
+	{
+	  "eventName": "d_greatJob2",
+	  "type": "dialog",
+	  "data": "Excellent, exactly what I would've done! Now head to the panel, I'll guide you through activating the lift",
+	  "parent": "johnson",
+	  "triggerNext": true,
+	  "cancelEvents": [
+		"playerEvents1.tryWalljumping"
+	  ]
+	},
+	{
+	  "eventName": "m_leaveJohnson5",
+	  "type": "method",
+	  "data": "leaveJohnson",
+	  "parent": "johnson",
+	  "postDelay": 1,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "m_stopJohnson4",
+	  "type": "method",
+	  "data": "stopJohnson",
+	  "parent": "johnson",
+	  "postDelay": 4,
+	  "triggerNext": true
+	},
+	{
+	  "eventName": "d_activateLift",
+	  "type": "dialog",
+	  "data": "You'll have to navigate the user interface using the touch-activated external display and figure out the correct input sequence to activate the hydraulic lifting mechanism.",
+	  "parent": "johnson",
+	}
+  ]
+}

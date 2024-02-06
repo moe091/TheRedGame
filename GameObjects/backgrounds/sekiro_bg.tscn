@@ -1,0 +1,177 @@
+[gd_scene load_steps=13 format=3 uid="uid://bm6c580yhipye"]
+
+[ext_resource type="Texture2D" uid="uid://s8tdmk1aq4ys" path="res://Images/SekiroFire/BG.png" id="1_8lyre"]
+[ext_resource type="Texture2D" uid="uid://bcmjt643e2v40" path="res://Images/SekiroFire/TowersBack.png" id="2_7ga24"]
+[ext_resource type="Texture2D" uid="uid://dgg2ljxs57vuw" path="res://Images/SekiroFire/Clouds.png" id="3_sglr6"]
+[ext_resource type="Texture2D" uid="uid://fvm4bc55kthm" path="res://Images/Sekiro/OldMountains1.png" id="4_djxk4"]
+[ext_resource type="Texture2D" uid="uid://devoipd1fl1q6" path="res://Images/Sekiro/OldMountains2.png" id="5_pjinq"]
+[ext_resource type="Texture2D" uid="uid://huf42vpkfeyu" path="res://Images/Sekiro/OldMountains3.png" id="6_khv4h"]
+[ext_resource type="Texture2D" uid="uid://bk07htt8svsl3" path="res://Images/Sekiro/OldMountains4.png" id="7_8l7t2"]
+[ext_resource type="Texture2D" uid="uid://bfkf6751t4s83" path="res://Images/Sekiro/OldMountains5.png" id="8_qud8a"]
+[ext_resource type="Texture2D" uid="uid://cnlcugjewuayk" path="res://Images/Sekiro/OldMountains6.png" id="9_q01y5"]
+[ext_resource type="Texture2D" uid="uid://djwudp4ikwywl" path="res://Images/Sekiro/OldMountains7.png" id="10_mw6rh"]
+[ext_resource type="Texture2D" uid="uid://ykg1tkd56nw8" path="res://Images/Sekiro/OldMountains8.png" id="11_drgek"]
+[ext_resource type="Texture2D" uid="uid://drwfker1ukq4x" path="res://Images/SekiroFire/Mountains9.png" id="12_xhldn"]
+
+[node name="SekiroBG" type="ParallaxBackground"]
+offset = Vector2(0, 540)
+transform = Transform2D(1, 0, 0, 1, 0, 540)
+
+[node name="BG" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="SekiroBG" type="Sprite2D" parent="BG"]
+texture_repeat = 2
+scale = Vector2(1, 1.00376)
+texture = ExtResource("1_8lyre")
+offset = Vector2(960, 0)
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="TowersBack" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.05, 0.05)
+
+[node name="TowersBack" type="Sprite2D" parent="TowersBack"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("2_7ga24")
+offset = Vector2(0, -480)
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 1080)
+
+[node name="TowersFront" type="ParallaxLayer" parent="."]
+visible = false
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.08, 0.08)
+
+[node name="TowersFront" type="Sprite2D" parent="TowersFront"]
+texture_repeat = 3
+position = Vector2(-6, 26)
+offset = Vector2(0, -400)
+region_enabled = true
+region_rect = Rect2(0, 0, 5760, 1080)
+
+[node name="Clouds" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="SekiroClouds" type="Sprite2D" parent="Clouds"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("3_sglr6")
+offset = Vector2(0, -370)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains1" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.15, 0.15)
+
+[node name="Mountains1" type="Sprite2D" parent="Mountains1"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("4_djxk4")
+offset = Vector2(0, -390)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains2" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.18, 0.18)
+
+[node name="Mountains2" type="Sprite2D" parent="Mountains2"]
+texture_repeat = 3
+position = Vector2(0, 200)
+scale = Vector2(1, 1.04324)
+texture = ExtResource("5_pjinq")
+offset = Vector2(0, -270)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Mountains3" type="Sprite2D" parent="Mountains3"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("6_khv4h")
+offset = Vector2(0, -250)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains4" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.23, 0.23)
+
+[node name="Mountains4" type="Sprite2D" parent="Mountains4"]
+texture_repeat = 3
+position = Vector2(0, -40)
+texture = ExtResource("7_8l7t2")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains5" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.25, 0.25)
+
+[node name="Mountains5" type="Sprite2D" parent="Mountains5"]
+texture_repeat = 3
+position = Vector2(0, 200)
+texture = ExtResource("8_qud8a")
+offset = Vector2(0, -200)
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains6" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.28, 0.28)
+
+[node name="Mountains6" type="Sprite2D" parent="Mountains6"]
+texture_repeat = 3
+texture = ExtResource("9_q01y5")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains7" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Mountains7" type="Sprite2D" parent="Mountains7"]
+texture_repeat = 3
+texture = ExtResource("10_mw6rh")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains8" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.32, 0.32)
+
+[node name="Mountains8" type="Sprite2D" parent="Mountains8"]
+texture_repeat = 3
+texture = ExtResource("11_drgek")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)
+
+[node name="Mountains9" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+position = Vector2(0, 200)
+motion_scale = Vector2(0.34, 0.34)
+
+[node name="Mountains9" type="Sprite2D" parent="Mountains9"]
+texture_repeat = 3
+texture = ExtResource("12_xhldn")
+region_enabled = true
+region_rect = Rect2(0, 0, 7680, 1080)

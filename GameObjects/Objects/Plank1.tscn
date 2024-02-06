@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cifbhrm60arkv"]
+
+[ext_resource type="Texture2D" uid="uid://ihjhw0udp7na" path="res://Images/BOBROSS/plank.png" id="1_l3sxl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t410u"]
+size = Vector2(1940.92, 72)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 10
+collision_mask = 11
+mass = 0.59
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l3sxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_t410u")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://3tuaem3wdhbp"]
+
+[ext_resource type="Texture2D" uid="uid://cru3n7xdj4kln" path="res://Images/BOBROSS/boulder.png" id="1_tga8i"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ichli"]
+friction = 0.91
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uw15e"]
+radius = 5.62974
+
+[node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 10
+collision_mask = 11
+mass = 0.69
+physics_material_override = SubResource("PhysicsMaterial_ichli")
+gravity_scale = 2.5
+linear_damp_mode = 1
+angular_damp_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.16, 1.16)
+texture = ExtResource("1_tga8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 15)
+shape = SubResource("CircleShape2D_uw15e")

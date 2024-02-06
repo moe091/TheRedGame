@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc2fwqdnvjjwa"]
+
+[ext_resource type="Script" path="res://GameObjects/ParticleController.gd" id="1_ewodg"]
+[ext_resource type="PackedScene" uid="uid://dptv04dffd8vp" path="res://GameObjects/effects/test_particles.tscn" id="2_x4w8p"]
+
+[node name="ParticleController" type="Node2D"]
+script = ExtResource("1_ewodg")
+col = Color(1, 1, 1, 1)
+
+[node name="P0" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P1" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P2" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P3" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P4" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P5" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P6" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P7" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
+
+[node name="P8" parent="." instance=ExtResource("2_x4w8p")]
+amount = 100
